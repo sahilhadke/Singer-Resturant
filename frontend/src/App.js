@@ -14,8 +14,30 @@ import {
 
 function App() {
   return (
-    <h1>Hello World</h1>
-    
+        
+    <Router>
+      <div>
+        
+        <Navbar />
+
+        <hr />
+        <Switch>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+     
+        <Footer />
+
+      </div>
+    </Router>
+
   );
 }
 
